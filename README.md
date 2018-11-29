@@ -1,19 +1,5 @@
 # MonkeyDev
 
-<p align="center">
-  <p align="center"></p>
-  <p align="center"></p>
-  <p align="center"></p>
-
-  <p align="center">
-    <img with="220px" height="220px" src="http://7xtdl4.com1.z0.glb.clouddn.com/script_1500695705204.png" alt="qrcode">
-  </p>
-
-  <p align="center">
-     群已满100人，关注公众号，点击"加群讨论"
-  </p>
-</p>
-
 A modified version of iOSOpenDev
 
 * easy to install
@@ -35,3 +21,26 @@ Plese Read Wiki: [Wiki](https://github.com/AloneMonkey/MonkeyDev/wiki)
 * 支持通过CocoaPods第三方应用集成SDK以及非越狱插件，简单来说就是通过CocoaPods搭建了一个非越狱插件商店。
 
 使用请阅读Wiki文档: [Wiki](https://github.com/AloneMonkey/MonkeyDev/wiki)
+
+
+非越狱插件CocoaPods私有仓库地址:[MonkeyDevSpecs](https://github.com/AloneMonkey/MonkeyDevSpecs)
+
+
+
+**免责声明: 软件仅供技术交流，禁止用于商业及非法用途，如产生法律纠纷与本人无关。**
+
+<br>
+
+<h2>《iOS应用逆向与安全》出版啦！！！</h2>
+
+# 购书链接
+
+#### 京东: [https://item.jd.com/12361729.html](https://item.jd.com/12361729.html)
+
+#### 天猫: [https://detail.tmall.com/item.htm?id=570691214072](https://detail.tmall.com/item.htm?id=570691214072)
+
+#### 当当: [http://product.dangdang.com/25283164.html](http://product.dangdang.com/25283164.html)
+
+#### 亚马逊: [https://www.amazon.cn/dp/B07D5952BR/](https://www.amazon.cn/dp/B07D5952BR/)
+
+<h3>请大家多多支持正版哦~</h3>

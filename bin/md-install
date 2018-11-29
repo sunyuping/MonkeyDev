@@ -120,7 +120,7 @@ function downloadFile() # args: sourceUrl, targetPath
 	curlPath=`which curl` || \
 		panic $? "Failed to get curl path"
 
-	"$curlPath" --silent --insecure --output "$targetPath" "$sourceUrl" || \
+	"$curlPath" --output "$targetPath" "$sourceUrl" || \
 		panic $? "Failed to download $sourceUrl to $targetPath"
 }
 
@@ -300,9 +300,22 @@ function writeDictToSpecification(){ #args: filePath, content
 mkdir -p "$MonkeyDevPath" || \
 	panic $? "Failed to make directory: $MonkeyDevPath"
 
+branch="master"
+
+if [[ "$1" ]]; then
+	branch="$1"
+fi
+
 #下载一些基础文件和模板文件
-downloadGithubTarball "https://codeload.github.com/AloneMonkey/MonkeyDev/tar.gz/master" "$MonkeyDevPath" "MonkeyDev base"
-downloadGithubTarball "https://codeload.github.com/AloneMonkey/MonkeyDev-Xcode-Templates/tar.gz/master" "$MonkeyDevPath/templates" "Xcode templates"
+downloadGithubTarball "https://codeload.github.com/AloneMonkey/MonkeyDev/tar.gz/$branch" "$MonkeyDevPath" "MonkeyDev base"
+downloadGithubTarball "https://codeload.github.com/AloneMonkey/MonkeyDev-Xcode-Templates/tar.gz/$branch" "$MonkeyDevPath/templates" "Xcode templates"
+
+#下载frida-ios-dump
+echo "Downloading frida-ios-dump from Github..."
+downloadFile "https://raw.githubusercontent.com/AloneMonkey/frida-ios-dump/3.x/dump.py" "$MonkeyDevPath/bin/dump.py"
+downloadFile "https://raw.githubusercontent.com/AloneMonkey/frida-ios-dump/3.x/dump.js" "$MonkeyDevPath/bin/dump.js"
+
+chmod +x "$MonkeyDevPath/bin/dump.py"
 
 #创建符号链接
 echo "Creating symlink to Xcode templates..."
